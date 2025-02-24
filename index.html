@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo-Login Page</title>
+
+    <!-- link daisy ui and tailwind css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen py-6 bg-green-50 mx-auto">
+        <header class="mb-10">
+            <nav class="flex justify-center items-center mt-6">
+                <div class="relative mt-10 flex justify-center items-center w-9/12">
+                    <img class="absolute w-44" src="assets/homecircle.png" alt="">
+                    <img class="w-16" src="assets/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+
+        <div class="hero bg-base-200 ">
+
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Account Number</span>
+                        </label>
+                        <input value="11111111111" id="accountNumber" type="number"
+                            placeholder="type your account number" class="input input-bordered" required />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Pin</span>
+                        </label>
+                        <input value="1234" id="accountPin" type="text" placeholder="type your pin"
+                            class="input input-bordered" required />
+                        <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                    </div>
+                    <div class="form-control mt-6">
+                        <button id="btn-login" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!-- Javascripts files -->
+    <script src="./scripts/login.js"></script>
+</body>
+
+</html>
