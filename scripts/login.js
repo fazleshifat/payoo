@@ -1,5 +1,5 @@
-document.getElementById('btn-login').addEventListener('click', function(even){
-    even.preventDefault();
+document.getElementById('btn-login').addEventListener('click', function(event){
+    event.preventDefault();
     
    const accountNumber = document.getElementById('accountNumber').value;
    const convertedAccNum = parseInt(accountNumber);
@@ -7,16 +7,16 @@ document.getElementById('btn-login').addEventListener('click', function(even){
    const accountPin = document.getElementById('accountPin').value;
    const convertedAccPin = parseInt(accountPin);
 
-   if( convertedAccNum === 11111111111){
+   if( accountNumber.length === 11){
     if( convertedAccPin === 1234){
         window.location.href="./main.html"
     }
     else{
-        console.log('incorrect pin')
+        alert('incorrect pin')
     }
    }
    else{
-    console.log('put a valid account number')
+    alert('put a valid account number')
    }
    
 } )
