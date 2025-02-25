@@ -7,6 +7,7 @@ document.getElementById('btn-login').addEventListener('click', function(event){
    const accountPin = document.getElementById('accountPin').value;
    const convertedAccPin = parseInt(accountPin);
 
+   console.log(convertedAccNum.length);
    if( accountNumber.length === 11){
     if( convertedAccPin === 1234){
         window.location.href="./main.html"
