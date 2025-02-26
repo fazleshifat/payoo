@@ -1,6 +1,20 @@
+document.getElementById('addMoneyToggle').addEventListener('click', function(event){
+    
+    event.preventDefault();
+
+    const cashOutToggle = document.getElementById('cashoutSection');
+    const addMoneySection = document.getElementById('addMoneySection');
+    cashOutToggle.classList.add('hidden');
+    addMoneySection.classList.remove('hidden');
+    console.log('addmoney clicked')
+
+})
+
 const btnAddMoney = document.getElementById('btn-addMoney');
 btnAddMoney.addEventListener('click', function (event) {
     event.preventDefault();
+
+
     const accountNumber = document.getElementById('accountNumber').value;
 
     const amount = document.getElementById('amount').value;
