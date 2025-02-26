@@ -6,7 +6,7 @@ document.getElementById('addMoneyToggle').addEventListener('click', function(eve
     const addMoneySection = document.getElementById('addMoneySection');
     cashOutToggle.classList.add('hidden');
     addMoneySection.classList.remove('hidden');
-    console.log('addmoney clicked')
+    // console.log('addmoney clicked')
 
 })
 
@@ -17,20 +17,25 @@ btnAddMoney.addEventListener('click', function (event) {
 
     const accountNumber = document.getElementById('accountNumber').value;
 
-    const amount = document.getElementById('amount').value;
-    const convertedAmount = parseFloat(amount);
-    console.log(convertedAmount, typeof convertedAmount);
-
-    const pin = document.getElementById('accountPin').value;
-    const convertedPin = parseInt(pin);
-    console.log(convertedPin, typeof convertedPin);
-
+    // Main balance
     const mainBalance = document.getElementById('mainBalance').innerText;
     const convertedMainBalance = parseFloat(mainBalance);
-    console.log(convertedMainBalance, typeof convertedMainBalance);
+    // console.log(convertedMainBalance, typeof convertedMainBalance);
+
+    // Amount Feild
+    const amount = document.getElementById('amount').value;
+    const convertedAmount = parseFloat(amount);
+    // console.log(convertedAmount, typeof convertedAmount);
+
+    // Pin number feild
+    const pin = document.getElementById('accountPin').value;
+    const convertedPin = parseInt(pin);
+    // console.log(convertedPin, typeof convertedPin);
+
+    
 
     // accessing element for appending items
-    const newInvalidAcc = document.getElementById('invalidAccount');
+    // const newInvalidAcc = document.getElementById('invalidAccount');
     const newInvalidAmount = document.getElementById('invalidAmount');
     const newInvalidPin = document.getElementById('invalidPin');
 
@@ -38,8 +43,7 @@ btnAddMoney.addEventListener('click', function (event) {
         if (convertedAmount) {
             if (convertedPin === 1234) {
                 sum = convertedMainBalance + convertedAmount;
-                console.log(sum);
-                convertedMainBalance.innerText = sum;
+                // console.log(sum);
                 document.getElementById('mainBalance').innerText = sum;
             }
             else {
