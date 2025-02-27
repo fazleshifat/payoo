@@ -6,8 +6,8 @@ document.getElementById('btn-cashOut')
         const cashOutPin = getInputValueById('cashoutPin');
         const mainBalance = getInnerTextById('mainBalance');
 
-        if(cashOutAmount > mainBalance){
-            alert('Invalid Amount');
+        if(cashOutAmount > mainBalance || cashOutAmount < 0){
+            alert('insufficient balance');
             return;
         }
         if (cashOutAmount) {
@@ -18,13 +18,16 @@ document.getElementById('btn-cashOut')
 
                 const container = document.getElementById('transactionContainer');
 
-                const p = document.createElement('p');
+                    const div = document.createElement('div');
 
-                p.innerText = `
-                    Cashout /=${cashOutAmount}Taka, from AccountNumber:${account} | TotalBalance: /=${substract}Taka
+                    div.innerHTML = `
+                    <h2 class="font-bold text-center"> <span class="text-yellow-600">Cashout</span>/=${cashOutAmount}Taka. </h2>
+                    <h2 class="font-bold text-center text-yellow-300"> New Balance/=${substract}Taka. </h2>
+                    <hr class="border border-yellow-300 my-2 mx-6">
+                     
+                    
                     `
-                p.classList.add('p-5', 'hr')
-                container.appendChild(p);
+                container.appendChild(div);
 
                 // Clearing input fields
                 document.getElementById('cashoutAmount').value = "";
