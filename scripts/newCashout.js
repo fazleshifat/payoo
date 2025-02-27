@@ -5,6 +5,11 @@ document.getElementById('btn-cashOut')
         const cashOutAmount = getInputValueById('cashoutAmount');
         const cashOutPin = getInputValueById('cashoutPin');
         const mainBalance = getInnerTextById('mainBalance');
+
+        if(cashOutAmount > mainBalance){
+            alert('Invalid Amount');
+            return;
+        }
         if (cashOutAmount) {
             if (cashOutPin) {
                 substract = mainBalance - cashOutAmount;
@@ -20,6 +25,11 @@ document.getElementById('btn-cashOut')
                     `
                 p.classList.add('p-5', 'hr')
                 container.appendChild(p);
+
+                // Clearing input fields
+                document.getElementById('cashoutAmount').value = "";
+                // document.getElementById('cashoutPin').value = "";
+                // document.getElementById('accountNumber').value = "";
             }
 
             else {
