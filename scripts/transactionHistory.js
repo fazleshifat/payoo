@@ -1,4 +1,6 @@
 document.getElementById('transactionHistoryBox')
-    .addEventListener('click', function () {
+    .addEventListener('click', function (event) {
+        event.preventDefault();
 
+        
     })

@@ -11,7 +11,16 @@ document.getElementById('btn-addMoney')
                 if (pin === 1234) {
                     sum = mainBalance + amount;
                     setInnerTextByIdAndValue('mainBalance', sum);
-                    console.log(sum);
+
+                    const container = document.getElementById('transactionContainer');
+
+                    const p = document.createElement('p');
+
+                    p.innerText = `
+                    Added /=${amount}Taka, from AccountNumber:${account} | TotalBalance: /=${sum}Taka
+                    `
+                   p.classList.add('p-5')
+                    container.appendChild(p);
                 }
                 else {
                     alert('Invalid PIN');

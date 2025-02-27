@@ -7,14 +7,16 @@ document.getElementById('addMoneyBox')
     .addEventListener('click', function () {
         handleToggle('addMoneySection', 'block');
         handleToggle('cashoutSection', 'none');
+        handleToggle('transactionHistorySection', 'none');
     })
 
 
 // toggle on Cashout Box
 document.getElementById('cashOutBox')
     .addEventListener('click', function () {
-        handleToggle('addMoneySection', 'none');
         handleToggle('cashoutSection', 'block');
+        handleToggle('addMoneySection', 'none');
+        handleToggle('transactionHistorySection', 'none');
     })
 
 
