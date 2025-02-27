@@ -5,11 +5,7 @@ document.getElementById('btn-addMoney')
         const pin = getInputValueById('accountPin')
         const account = getInputValueById('accountNumber');
         const mainBalance = getInnerTextById('mainBalance');
-        // console.log(amount,typeof amount);
-        // console.log(pin,typeof pin);
-        // console.log(account,typeof account);
-        // console.log(mainBalance, typeof mainBalance);
-
+        
         if (account.toString().length === 11) {
             if (amount) {
                 if (pin === 1234) {
